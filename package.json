@@ -1,0 +1,19 @@
+{
+  "name": "pestorepo",
+  "version": "1.0.0",
+  "description": "all weektest repo",
+  "main": "Test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakbhadoriya/PestoRepo.git"
+  },
+  "author": "Deepak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepakbhadoriya/PestoRepo/issues"
+  },
+  "homepage": "https://github.com/deepakbhadoriya/PestoRepo#readme"
+}
