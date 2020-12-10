@@ -7,16 +7,26 @@ const getSecondMinMax = (arr) => {
     });
   arr.length < 3 && (isArrayValid = false);
 
-  //sorting array
-  isArrayValid &&
-    arr.sort((a, b) => {
-      return a - b;
-    });
+  if (isArrayValid) {
+    //remove duplicate elements
+    arr = [...new Set(arr)];
 
-  //Checking if array is valid and returning result accordingly
-  return isArrayValid
-    ? `second min. no ${arr[1]} second max no ${arr[arr.length - 2]}`
-    : "Invalid array : Min 3 element and all number";
+    //finding min and max from the array
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
+
+    //removing min and max from the array
+    arr.splice(arr.indexOf(max), 1);
+    arr.splice(arr.indexOf(min), 1);
+
+    //now finding again min and max from the array
+    max = Math.max(...arr);
+    min = Math.min(...arr);
+
+    return `second min. no ${min} second max no ${max}`;
+  } else {
+    return "Invalid array : Min 3 element and all number";
+  }
 };
 
 // Test cases
