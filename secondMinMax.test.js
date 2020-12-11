@@ -7,6 +7,9 @@ const getSecondMinMax = (arr) => {
     });
   arr.length < 3 && (isArrayValid = false);
 
+  //remove duplicate elements
+  arr = [...new Set(arr)];
+
   //sorting array
   isArrayValid &&
     arr.sort((a, b) => {
